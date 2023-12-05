@@ -11,7 +11,7 @@ RUN apk update && apk add --no-cache dos2unix \
     && apk del dos2unix
 
 # install project dependencies
-RUN npm ci
+RUN npm install
 RUN npm run build
 
 FROM nginx:alpine
